@@ -1,0 +1,2550 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" "http://www.w3.org/TR/1998/REC-html40-19980424/loose.dtd">
+<html>
+<head>
+    <title>BTTimer.h</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf8">
+    <meta name="generator" content="HeaderDoc">
+    <meta name="xcode-display" content="render">
+    <style type="text/css"><!--
+    .char {
+        background: #ffffff;
+        color: #0000ff;
+    }
+
+    .comment {
+        background: #ffffff;
+        color: #236e25
+    }
+
+    .function {
+        background: #ffffff;
+        color: #000000;
+    }
+
+    .keyword {
+        background: #ffffff;
+        color: #761550;
+    }
+
+    .number {
+        background: #ffffff;
+        color: #0000ff;
+    }
+
+    .param {
+        background: #ffffff;
+        color: #000000;
+    }
+
+    .preprocessor {
+        background: #ffffff;
+        color: #236e25
+    }
+
+    .string {
+        background: #ffffff;
+        color: #891315;
+    }
+
+    .template {
+        background: #ffffff;
+        color: #761550;
+    }
+
+    .type {
+        background: #ffffff;
+        color: #761550;
+    }
+
+    .var {
+        background: #ffffff;
+        color: #000000;
+    }
+
+    body {
+        border: 0px;
+        margin: 0px;
+    }
+
+    div {
+        font-size: 10pt;
+        text-decoration: none;
+        font-family: lucida grande, geneva, helvetica, arial, sans-serif;
+        color: #000000;
+    }
+
+    td {
+        font-size: 10pt;
+        text-decoration: none;
+        font-family: lucida grande, geneva, helvetica, arial, sans-serif;
+        color: #000000;
+    }
+
+    span.hd_tocAccessSpace {
+        display: block;
+        font-size: 1px;
+        height: 3px;
+        min-height: 3px;
+    }
+
+    span.hd_tocGroupSpace {
+        display: block;
+        font-size: 1px;
+        height: 3px;
+        min-height: 3px;
+    }
+
+    span.hd_tocGroup {
+        display: block;
+        font-weight: bold;
+        font-size: 10pt;
+        text-decoration: none;
+        font-family: lucida grande, geneva, helvetica, arial, sans-serif;
+        color: #000000;
+        margin-left: 0px;
+        padding-left: 40px;
+    }
+
+    span.hd_tocGroup + span.hd_tocAccess {
+        padding-top: 5px;
+    }
+
+    td.toc_contents_text {
+        font-size: 11pt;
+        text-decoration: none;
+        font-family: lucida grande, geneva, helvetica, arial, sans-serif;
+        color: #000000;
+    }
+
+    li.tocSubEntry {
+        font-size: 11pt;
+        text-decoration: none;
+        font-family: lucida grande, geneva, helvetica, arial, sans-serif;
+        color: #000000;
+    }
+
+    p {
+        font-size: 10pt;
+        text-decoration: none;
+        font-family: lucida grande, geneva, helvetica, arial, sans-serif;
+        color: #000000;
+    }
+
+    a:link {
+        text-decoration: none;
+        font-family: lucida grande, geneva, helvetica, arial, sans-serif;
+        color: #36c;
+    }
+
+    a:visited {
+        text-decoration: none;
+        font-family: lucida grande, geneva, helvetica, arial, sans-serif;
+        color: #36c;
+    }
+
+    a:visited:hover {
+        text-decoration: underline;
+        font-family: lucida grande, geneva, helvetica, arial, sans-serif;
+        color: #36c;
+    }
+
+    a:active {
+        text-decoration: none;
+        font-family: lucida grande, geneva, helvetica, arial, sans-serif;
+        color: #36c;
+    }
+
+    a:hover {
+        text-decoration: underline;
+        font-family: lucida grande, geneva, helvetica, arial, sans-serif;
+        color: #36c;
+    }
+
+    h2.h2tight {
+        margin-top: 0px;
+        padding-top: 0px;
+    }
+
+    h1 {
+        margin-top: 13px;
+        padding-top: 0px;
+    }
+
+    h4 {
+        text-decoration: none;
+        font-family: lucida grande, geneva, helvetica, arial, sans-serif;
+        font-size: tiny;
+        font-weight: bold;
+    }
+
+    h5 {
+        text-decoration: none;
+        font-family: lucida grande, geneva, helvetica, arial, sans-serif;
+        font-size: 10.1pt;
+        font-weight: bold;
+    }
+
+    pre {
+        text-decoration: none;
+        font-family: Courier, Consolas, monospace;
+        color: #666;
+        font-size: 10pt;
+    }
+
+    pre a {
+        font-family: Courier, Consolas, monospace;
+        color: #666;
+        font-size: 10pt;
+    }
+
+    pre a:link {
+        font-family: Courier, Consolas, monospace;
+        color: #36c;
+        font-size: 10pt;
+    }
+
+    pre a:visited {
+        font-family: Courier, Consolas, monospace;
+        color: #36c;
+        font-size: 10pt;
+    }
+
+    pre a:visited:hover {
+        font-family: Courier, Consolas, monospace;
+        color: #36c;
+        font-size: 10pt;
+    }
+
+    pre a:active {
+        font-family: Courier, Consolas, monospace;
+        color: #36c;
+        font-size: 10pt;
+    }
+
+    pre a:hover {
+        font-family: Courier, Consolas, monospace;
+        color: #36c;
+        font-size: 10pt;
+    }
+
+    code {
+        text-decoration: none;
+        font-family: Courier, Consolas, monospace;
+        color: #666;
+        font-size: 10pt;
+    }
+
+    code a {
+        font-family: Courier, Consolas, monospace;
+        color: #666;
+        font-size: 10pt;
+    }
+
+    code a:link {
+        font-family: Courier, Consolas, monospace;
+        color: #36c;
+        font-size: 10pt;
+    }
+
+    code a:visited {
+        font-family: Courier, Consolas, monospace;
+        color: #36c;
+        font-size: 10pt;
+    }
+
+    code a:visited:hover {
+        font-family: Courier, Consolas, monospace;
+        color: #36c;
+        font-size: 10pt;
+    }
+
+    code a:active {
+        font-family: Courier, Consolas, monospace;
+        color: #36c;
+        font-size: 10pt;
+    }
+
+    code a:hover {
+        font-family: Courier, Consolas, monospace;
+        color: #36c;
+        font-size: 10pt;
+    }
+
+    tt {
+        text-decoration: none;
+        font-family: Courier, Consolas, monospace;
+        color: #666;
+        font-size: 10pt;
+    }
+
+    tt a {
+        font-family: Courier, Consolas, monospace;
+        color: #666;
+        font-size: 10pt;
+    }
+
+    tt a:link {
+        font-family: Courier, Consolas, monospace;
+        color: #36c;
+        font-size: 10pt;
+    }
+
+    tt a:visited {
+        font-family: Courier, Consolas, monospace;
+        color: #36c;
+        font-size: 10pt;
+    }
+
+    tt a:visited:hover {
+        font-family: Courier, Consolas, monospace;
+        color: #36c;
+        font-size: 10pt;
+    }
+
+    tt a:active {
+        font-family: Courier, Consolas, monospace;
+        color: #36c;
+        font-size: 10pt;
+    }
+
+    tt a:hover {
+        font-family: Courier, Consolas, monospace;
+        color: #36c;
+        font-size: 10pt;
+    }
+
+    body {
+        text-decoration: none;
+        font-family: Courier, Consolas, monospace;
+        color: #666;
+        font-size: 10pt;
+        padding-left: 0px;
+        padding-top: 0px;
+        margin-left: 0px;
+        margin-top: 0px;
+        border: none;
+    }
+
+    #hd_outermost_table {
+        margin-left: 0px;
+        border-spacing: 0px;
+        margin-top: 0px;
+        padding-left: 0px;
+        padding-top: 0px;
+        border: none;
+    }
+
+    #hd_outermost_table > tr {
+        border-spacing: 0px;
+        margin-left: 0px;
+        margin-top: 0px;
+        padding-left: 0px;
+        padding-top: 0px;
+        border: none;
+    }
+
+    #hd_outermost_table > tr > td {
+        border-spacing: 0px;
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+
+    #hd_outermost_table > tbody > tr {
+        border-spacing: 0px;
+        margin-left: 0px;
+        margin-top: 0px;
+        padding-left: 0px;
+        padding-top: 0px;
+        border: none;
+    }
+
+    #hd_outermost_table > tbody > tr > td {
+        border-spacing: 0px;
+        margin-left: 0px;
+        margin-top: 0px;
+        padding-top: 3px;
+    }
+
+    .afterName {
+        display: none;
+    }
+
+    .list_indent {
+        margin-left: 40px;
+    }
+
+    .declaration_indent {
+        margin-left: 40px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        min-height: 12px;
+        vertical-align: middle;
+    }
+
+    .declaration_indent pre {
+        margin-top: 20px;
+        padding-top: 0px;
+        margin-bottom: 20px;
+        padding-bottom: 0px;
+    }
+
+    .gapBeforeFooter {
+        display: none;
+    }
+
+    hr {
+        height: 0px;
+        min-height: 0px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid #909090;
+    }
+
+    hr.afterHeader {
+        display: none
+    }
+
+    .param_group_indent {
+        margin-left: 25px;
+    }
+
+    .param_indent {
+        margin-left: 40px;
+        margin-top: 0px;
+        padding-top: 0px;
+    }
+
+    .param_indent dl {
+        margin-top: 4px;
+        padding-top: 0px;
+    }
+
+    dl dd > p:first-child {
+        margin-top: 2px;
+        padding-top: 0px;
+    }
+
+    .param_indent dl dd > p:first-child {
+        margin-top: 2px;
+        padding-top: 0px;
+    }
+
+    .group_indent {
+        margin-left: 40px;
+    }
+
+    .group_desc_indent {
+        margin-left: 20px;
+    }
+
+    .warning_indent {
+        margin-left: 40px;
+    }
+
+    .important_indent {
+        margin-left: 40px;
+    }
+
+    .note_indent {
+        margin-left: 40px;
+    }
+
+    h3 {
+        color: #3C4C6C;
+    }
+
+    .tight {
+        margin-top: 2px;
+        margin-bottom: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    h3 a {
+        color: #3C4C6C;
+        font-size: 16px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: bold;
+        height: 0px;
+        line-height: normal;
+    }
+
+    .hd_tocAccess {
+        display: block;
+        margin-left: 40px;
+        font-style: italic;
+        font-size: 10px;
+        font-weight: normal;
+        color: #303030;
+    }
+
+    .tocSubheading {
+        margin-bottom: 4px;
+    }
+
+    --></style>
+    <style><!--
+    body {
+        padding: 0px;
+        margin: 0px;
+        border: 0px;
+    }
+
+    .toc_contents_text {
+        padding-left: 1em;
+        text-indent: -1em;
+    }
+
+    ul.tocSubEntryList li.tocSubEntry {
+        list-style: none;
+    }
+
+    #colorbox {
+        display: none;
+    }
+
+    .spec_sheet_line {
+        margin-bottom: 1px;
+    }
+
+    .collapsible {
+        display: none;
+    }
+
+    .toc_leadspace {
+        width: 10;
+        min-width: 10;
+    }
+
+    .disclosure_triangle_td {
+        width: 14;
+        min-width: 14;
+        font-size: 10px;
+        vertical-align: middle;
+    }
+
+    .specbox td {
+        font-size: 13px;
+    }
+
+    .specbox td a {
+        font-size: 13px;
+    }
+
+    .specbox td code {
+        font-size: 13px;
+    }
+
+    .specbox td tt {
+        font-size: 13px;
+    }
+
+    .specbox td pre {
+        font-size: 13px;
+    }
+
+    .specbox a {
+        font-size: 12px;
+    }
+
+    .disclosure_triangle_td a {
+        text-decoration: none;
+    }
+
+    .disclosure_triangle_td a:link {
+        text-decoration: none;
+    }
+
+    .disclosure_triangle_td a:active {
+        text-decoration: none;
+    }
+
+    .disclosure_triangle_td a:visited:hover {
+        text-decoration: none;
+    }
+
+    .disclosure_triangle_td a:hover {
+        text-decoration: none;
+    }
+
+    .hd_toc_box {
+        padding-top: 10px;
+        padding-right: 15px;
+    }
+
+    .tocSeparator {
+        margin-top: 15px;
+        padding-bottom: 0px;
+        margin-bottom: 0px;
+    }
+
+    .tocSubEntryList {
+        margin-left: 0px;
+        padding-left: 40px;
+        padding-top: 0px;
+        margin-top: 2px;
+        padding-bottom: 0px;
+        margin-bottom: 8px;
+    }
+
+    .hd_toc_heading_table {
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+
+    .hd_toc_entry_table {
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+
+    .tocSubEntry {
+        margin-left: 0px;
+        padding-left: 0px;
+        margin-top: 0px;
+        margin-bottom: 1px;
+    }
+
+    .tocSubEntry a {
+        font-size: 10pt;
+    }
+
+    .tocSubheading {
+        padding-left: 14px;
+        margin-left: 0px;
+        margin-top: 5px;
+        padding-top: 0px;
+        font-size: 16px;
+        color: #808080;
+    }
+
+    #hd_outermost_table {
+        margin-left: 0px;
+        border-spacing: 0px;
+        margin-top: 0px;
+        padding-left: 0px;
+        padding-top: 0px;
+        border: none;
+    }
+
+    #hd_outermost_table > tr {
+        border-spacing: 0px;
+        margin-left: 0px;
+        margin-top: 0px;
+        padding-left: 0px;
+        padding-top: 0px;
+        border: none;
+    }
+
+    #hd_outermost_table > tr > td {
+        border-spacing: 0px;
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+
+    #hd_outermost_table > tbody > tr {
+        border-spacing: 0px;
+        margin-left: 0px;
+        margin-top: 0px;
+        padding-left: 0px;
+        padding-top: 0px;
+        border: none;
+    }
+
+    #hd_outermost_table > tbody > tr > td {
+        border-spacing: 0px;
+        margin-left: 0px;
+        margin-top: 0px;
+        padding-top: 3px;
+    }
+
+    #tocMenu {
+        border-right: 1px solid #c0c0c0;
+        background-color: #f4f4ff;
+        top: 0px;
+        left: 0px;
+        width: 230px;
+        height: 100%;
+    }
+
+    #bodyContents {
+        width: auto;
+        padding-left: 15px;
+    }
+
+    --></style>
+    <style id="disable_before_iOS_5"><!--
+    #tocMenu {
+        position: fixed;
+        height: 100%;
+        overflow: auto;
+    }
+
+    #bodyContents {
+        width: auto;
+        left: 235px;
+        right: 0;
+        padding-left: 15px;
+        position: fixed;
+        height: 100%;
+        overflow-y: scroll;
+    }
+
+    --></style>
+    <script language="JavaScript" type="text/javascript"><!--
+    if(navigator.platform && (navigator.platform.match(/iPad/) || navigator.platform.match(/iPhone/) || navigator.platform.match(/iPod/))){
+        if(navigator.userAgent.match(/OS 1(_\d)+/) ||
+            navigator.userAgent.match(/OS 2(_\d)+/) ||
+            navigator.userAgent.match(/OS 3(_\d)+/) ||
+            navigator.userAgent.match(/OS 4(_\d)+/)){
+            /* Earlier iOS versions require different scrolling gestures with position: fixed. */
+            var del_style_elt = document.getElementById("disable_before_iOS_5");
+            if(del_style_elt) del_style_elt.parentNode.removeChild(del_style_elt);
+        }
+    }
+    // --></script>
+    <script language="JavaScript" type="text/javascript"><!--
+    function getNewHTTPObject(){
+        var xmlhttp;
+
+        /** Special IE only code ... */
+        /*@cc_on
+          @if (@_jscript_version >= 5)
+              try
+              {
+                  xmlhttp = new ActiveXObject('Msxml2.XMLHTTP');
+              }
+              catch (e)
+              {
+                  try
+                  {
+                      xmlhttp = new ActiveXObject('Microsoft.XMLHTTP');
+                  }
+                  catch (E)
+                  {
+                      xmlhttp = false;
+                  }
+             }
+          @else
+             xmlhttp = false;
+        @end @*/
+
+        /** Every other browser on the planet */
+        if(!xmlhttp && typeof XMLHttpRequest != 'undefined'){
+            try{
+                xmlhttp = new XMLHttpRequest();
+            }
+            catch(e){
+                xmlhttp = false;
+            }
+        }
+
+        return xmlhttp;
+    }
+
+    function hidetoc(){
+        var toc = document.getElementById('tocMenu');
+        var src = toc.getAttribute('src');
+        var xhr = getNewHTTPObject();
+        xhr.open('GET', src, true);
+        xhr.onreadystatechange = function(){
+            if(xhr.readyState == 4){
+                var toc = document.getElementById('tocMenu');
+                toc.innerHTML = xhr.responseText;
+            }
+        }
+        xhr.send(null);
+        var origURL = parent.document.URL;
+        var contentURL = origURL.substring(origURL.indexOf('?') + 1, origURL.length);
+        if(contentURL.length == origURL.length){
+            jumpPos = origURL.substring(origURL.indexOf('#') + 1, origURL.length);
+        }
+        if(contentURL == "hidetoc"){
+            var body = document.getElementById('bodyContents');
+            if(toc && body){
+                toc.style.display = 'none';
+                body.style.marginLeft = '0px';
+            }
+        }
+    }
+
+    function disclosure_triangle(elt){
+        var linkelt = elt;
+        while(elt && elt.tagName != 'TABLE'){
+            elt = elt.parentNode;
+        }
+        if(!elt){
+            return;
+        }
+        while(elt && elt.tagName != 'DIV'){
+            elt = elt.nextSibling;
+        }
+        if(!elt){
+            return;
+        }
+        if(parseInt(linkelt.getAttribute('state'))){
+            // It's open.  Close it
+            linkelt.innerHTML = '&#x25B7;';
+            linkelt.setAttribute('state', 0);
+            linkelt.setAttribute('class', 'closed_disclosure_triangle');
+            elt.style.display = 'none';
+        }
+        else{
+            // It's closed.  Open it
+            linkelt.innerHTML = '&#x25BC;';
+            linkelt.setAttribute('state', 1);
+            linkelt.setAttribute('class', 'open_disclosure_triangle');
+            elt.style.display = 'block';
+        }
+    }
+
+    --></script>
+    <style type="text/css"><!--
+    .char {
+        background: #ffffff;
+        color: #0000ff;
+    }
+
+    .comment {
+        background: #ffffff;
+        color: #236e25
+    }
+
+    .function {
+        background: #ffffff;
+        color: #000000;
+    }
+
+    .keyword {
+        background: #ffffff;
+        color: #761550;
+    }
+
+    .number {
+        background: #ffffff;
+        color: #0000ff;
+    }
+
+    .param {
+        background: #ffffff;
+        color: #000000;
+    }
+
+    .preprocessor {
+        background: #ffffff;
+        color: #236e25
+    }
+
+    .string {
+        background: #ffffff;
+        color: #891315;
+    }
+
+    .template {
+        background: #ffffff;
+        color: #761550;
+    }
+
+    .type {
+        background: #ffffff;
+        color: #761550;
+    }
+
+    .var {
+        background: #ffffff;
+        color: #000000;
+    }
+
+    body {
+        border: 0px;
+        margin: 0px;
+    }
+
+    div {
+        font-size: 10pt;
+        text-decoration: none;
+        font-family: lucida grande, geneva, helvetica, arial, sans-serif;
+        color: #000000;
+    }
+
+    td {
+        font-size: 10pt;
+        text-decoration: none;
+        font-family: lucida grande, geneva, helvetica, arial, sans-serif;
+        color: #000000;
+    }
+
+    span.hd_tocAccessSpace {
+        display: block;
+        font-size: 1px;
+        height: 3px;
+        min-height: 3px;
+    }
+
+    span.hd_tocGroupSpace {
+        display: block;
+        font-size: 1px;
+        height: 3px;
+        min-height: 3px;
+    }
+
+    span.hd_tocGroup {
+        display: block;
+        font-weight: bold;
+        font-size: 10pt;
+        text-decoration: none;
+        font-family: lucida grande, geneva, helvetica, arial, sans-serif;
+        color: #000000;
+        margin-left: 0px;
+        padding-left: 40px;
+    }
+
+    span.hd_tocGroup + span.hd_tocAccess {
+        padding-top: 5px;
+    }
+
+    td.toc_contents_text {
+        font-size: 11pt;
+        text-decoration: none;
+        font-family: lucida grande, geneva, helvetica, arial, sans-serif;
+        color: #000000;
+    }
+
+    li.tocSubEntry {
+        font-size: 11pt;
+        text-decoration: none;
+        font-family: lucida grande, geneva, helvetica, arial, sans-serif;
+        color: #000000;
+    }
+
+    p {
+        font-size: 10pt;
+        text-decoration: none;
+        font-family: lucida grande, geneva, helvetica, arial, sans-serif;
+        color: #000000;
+    }
+
+    a:link {
+        text-decoration: none;
+        font-family: lucida grande, geneva, helvetica, arial, sans-serif;
+        color: #36c;
+    }
+
+    a:visited {
+        text-decoration: none;
+        font-family: lucida grande, geneva, helvetica, arial, sans-serif;
+        color: #36c;
+    }
+
+    a:visited:hover {
+        text-decoration: underline;
+        font-family: lucida grande, geneva, helvetica, arial, sans-serif;
+        color: #36c;
+    }
+
+    a:active {
+        text-decoration: none;
+        font-family: lucida grande, geneva, helvetica, arial, sans-serif;
+        color: #36c;
+    }
+
+    a:hover {
+        text-decoration: underline;
+        font-family: lucida grande, geneva, helvetica, arial, sans-serif;
+        color: #36c;
+    }
+
+    h2.h2tight {
+        margin-top: 0px;
+        padding-top: 0px;
+    }
+
+    h1 {
+        margin-top: 13px;
+        padding-top: 0px;
+    }
+
+    h4 {
+        text-decoration: none;
+        font-family: lucida grande, geneva, helvetica, arial, sans-serif;
+        font-size: tiny;
+        font-weight: bold;
+    }
+
+    h5 {
+        text-decoration: none;
+        font-family: lucida grande, geneva, helvetica, arial, sans-serif;
+        font-size: 10.1pt;
+        font-weight: bold;
+    }
+
+    pre {
+        text-decoration: none;
+        font-family: Courier, Consolas, monospace;
+        color: #666;
+        font-size: 10pt;
+    }
+
+    pre a {
+        font-family: Courier, Consolas, monospace;
+        color: #666;
+        font-size: 10pt;
+    }
+
+    pre a:link {
+        font-family: Courier, Consolas, monospace;
+        color: #36c;
+        font-size: 10pt;
+    }
+
+    pre a:visited {
+        font-family: Courier, Consolas, monospace;
+        color: #36c;
+        font-size: 10pt;
+    }
+
+    pre a:visited:hover {
+        font-family: Courier, Consolas, monospace;
+        color: #36c;
+        font-size: 10pt;
+    }
+
+    pre a:active {
+        font-family: Courier, Consolas, monospace;
+        color: #36c;
+        font-size: 10pt;
+    }
+
+    pre a:hover {
+        font-family: Courier, Consolas, monospace;
+        color: #36c;
+        font-size: 10pt;
+    }
+
+    code {
+        text-decoration: none;
+        font-family: Courier, Consolas, monospace;
+        color: #666;
+        font-size: 10pt;
+    }
+
+    code a {
+        font-family: Courier, Consolas, monospace;
+        color: #666;
+        font-size: 10pt;
+    }
+
+    code a:link {
+        font-family: Courier, Consolas, monospace;
+        color: #36c;
+        font-size: 10pt;
+    }
+
+    code a:visited {
+        font-family: Courier, Consolas, monospace;
+        color: #36c;
+        font-size: 10pt;
+    }
+
+    code a:visited:hover {
+        font-family: Courier, Consolas, monospace;
+        color: #36c;
+        font-size: 10pt;
+    }
+
+    code a:active {
+        font-family: Courier, Consolas, monospace;
+        color: #36c;
+        font-size: 10pt;
+    }
+
+    code a:hover {
+        font-family: Courier, Consolas, monospace;
+        color: #36c;
+        font-size: 10pt;
+    }
+
+    tt {
+        text-decoration: none;
+        font-family: Courier, Consolas, monospace;
+        color: #666;
+        font-size: 10pt;
+    }
+
+    tt a {
+        font-family: Courier, Consolas, monospace;
+        color: #666;
+        font-size: 10pt;
+    }
+
+    tt a:link {
+        font-family: Courier, Consolas, monospace;
+        color: #36c;
+        font-size: 10pt;
+    }
+
+    tt a:visited {
+        font-family: Courier, Consolas, monospace;
+        color: #36c;
+        font-size: 10pt;
+    }
+
+    tt a:visited:hover {
+        font-family: Courier, Consolas, monospace;
+        color: #36c;
+        font-size: 10pt;
+    }
+
+    tt a:active {
+        font-family: Courier, Consolas, monospace;
+        color: #36c;
+        font-size: 10pt;
+    }
+
+    tt a:hover {
+        font-family: Courier, Consolas, monospace;
+        color: #36c;
+        font-size: 10pt;
+    }
+
+    body {
+        text-decoration: none;
+        font-family: Courier, Consolas, monospace;
+        color: #666;
+        font-size: 10pt;
+        padding-left: 0px;
+        padding-top: 0px;
+        margin-left: 0px;
+        margin-top: 0px;
+        border: none;
+    }
+
+    #hd_outermost_table {
+        margin-left: 0px;
+        border-spacing: 0px;
+        margin-top: 0px;
+        padding-left: 0px;
+        padding-top: 0px;
+        border: none;
+    }
+
+    #hd_outermost_table > tr {
+        border-spacing: 0px;
+        margin-left: 0px;
+        margin-top: 0px;
+        padding-left: 0px;
+        padding-top: 0px;
+        border: none;
+    }
+
+    #hd_outermost_table > tr > td {
+        border-spacing: 0px;
+        margin-left: 0px;
+        margin-top: 0px;
+    }
+
+    #hd_outermost_table > tbody > tr {
+        border-spacing: 0px;
+        margin-left: 0px;
+        margin-top: 0px;
+        padding-left: 0px;
+        padding-top: 0px;
+        border: none;
+    }
+
+    #hd_outermost_table > tbody > tr > td {
+        border-spacing: 0px;
+        margin-left: 0px;
+        margin-top: 0px;
+        padding-top: 3px;
+    }
+
+    .afterName {
+        display: none;
+    }
+
+    .list_indent {
+        margin-left: 40px;
+    }
+
+    .declaration_indent {
+        margin-left: 40px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+        min-height: 12px;
+        vertical-align: middle;
+    }
+
+    .declaration_indent pre {
+        margin-top: 20px;
+        padding-top: 0px;
+        margin-bottom: 20px;
+        padding-bottom: 0px;
+    }
+
+    .gapBeforeFooter {
+        display: none;
+    }
+
+    hr {
+        height: 0px;
+        min-height: 0px;
+        border-top: none;
+        border-left: none;
+        border-right: none;
+        border-bottom: 1px solid #909090;
+    }
+
+    hr.afterHeader {
+        display: none
+    }
+
+    .param_group_indent {
+        margin-left: 25px;
+    }
+
+    .param_indent {
+        margin-left: 40px;
+        margin-top: 0px;
+        padding-top: 0px;
+    }
+
+    .param_indent dl {
+        margin-top: 4px;
+        padding-top: 0px;
+    }
+
+    dl dd > p:first-child {
+        margin-top: 2px;
+        padding-top: 0px;
+    }
+
+    .param_indent dl dd > p:first-child {
+        margin-top: 2px;
+        padding-top: 0px;
+    }
+
+    .group_indent {
+        margin-left: 40px;
+    }
+
+    .group_desc_indent {
+        margin-left: 20px;
+    }
+
+    .warning_indent {
+        margin-left: 40px;
+    }
+
+    .important_indent {
+        margin-left: 40px;
+    }
+
+    .note_indent {
+        margin-left: 40px;
+    }
+
+    h3 {
+        color: #3C4C6C;
+    }
+
+    .tight {
+        margin-top: 2px;
+        margin-bottom: 0px;
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+
+    h3 a {
+        color: #3C4C6C;
+        font-size: 16px;
+        font-style: normal;
+        font-variant: normal;
+        font-weight: bold;
+        height: 0px;
+        line-height: normal;
+    }
+
+    .hd_tocAccess {
+        display: block;
+        margin-left: 40px;
+        font-style: italic;
+        font-size: 10px;
+        font-weight: normal;
+        color: #303030;
+    }
+
+    .tocSubheading {
+        margin-bottom: 4px;
+    }
+
+    --></style>
+</head>
+<body bgcolor="#ffffff" onload="hidetoc();">
+
+<a name="//apple_ref/doc/header/BTTimer.h"></a>
+<table id="hd_outermost_table" height="100%" width="100%">
+    <tr>
+        <td valign="top" id="tocMenu" src="toc.html"></td>
+        <td id="bodyContents" valign="top">
+            <a name="top"></a>
+            <h1><a name="BTTimer.h">BTTimer.h</a></h1>
+            <div class="spec_sheet_info_box">
+                <table cellspacing="0" class="specbox">
+                    <tr>
+                        <td scope="row"><b>Includes:</b></td>
+                        <td>
+                            <div style="margin-bottom:1px">
+                                <div class="content_text">
+                                    &lt;Foundation/Foundation.h&gt;
+                                    
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <h2>Introduction</h2>
+            <p></p>
+            <p>A timer instance that can be started, marked interactive, and ended.
+                </p>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+            <p>
+            Timers maintain the start, interactive, and end times in milliseconds. They also maintain a map of
+            attributes for the timer such as page name, brand value, campaign name, AB test, etc.
+            
+        </p>
+            <hr class="afterClassOrHeaderInfo">
+            <br><a name="HeaderDoc_functions"></a>
+            <h2 class="h2tight">Functions</h2>
+            <dl>
+                <dt><tt><a href="index.html#//apple_ref/c/func/property" target="_top">property(nonatomic, readonly,
+                    getter)</a></tt></dt>
+                <dd><p>Determines if this timer is currently running
+                </p></dd>
+                <dt><tt><a href="index.html#//apple_ref/c/func/property_DONTLINK_5" target="_top">property(nonatomic,
+                    readonly, getter)</a></tt></dt>
+                <dd><p>Determines if this timer has been ended
+                </p></dd>
+            </dl>
+            <hr class="betweenAPIEntries">
+            
+            <a name="//apple_ref/c/func/property"></a>
+            <h3><a name="property(nonatomic,readonly,getter)">property(nonatomic, readonly, getter)</a></h3>
+            <hr class="afterName">
+            <p></p>
+            <p>Determines if this timer is currently running
+                </p>
+            <div class="declaration_indent">
+<pre>@<a machinegenerated="true"
+                                                                                  href="index.html#//apple_ref/c/func/property"
+                                                                                  logicalPath="//apple_ref/c/instm/property //apple_ref/c/clm/property //apple_ref/c/intfcm/property //apple_ref/c/intfm/property //apple_ref/c/func/property"
+                                                                                  target="_top"><span class="function">property</span></a> (
+    <span class="param">nonatomic</span>,
+    <span class="param">readonly</span>,
+    <span
+            class="type">getter</span> = <span class="param">isRunning</span>)
+    <span
+            class="type">BOOL</span>
+    <span
+            class="var">running</span>;
+    </pre>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+            <p></p>
+            <p>True if timer has started but not yet ended.
+
+                </p>
+            <hr class="betweenAPIEntries">
+            
+            <a name="//apple_ref/c/func/property_DONTLINK_5"></a>
+            <h3><a name="property(nonatomic,readonly,getter)">property(nonatomic, readonly, getter)</a></h3>
+            <hr class="afterName">
+            <p>
+                </p>
+            <p>Determines if this timer has been ended
+                </p>
+            <div class="declaration_indent">
+<pre>@<a machinegenerated="true"
+                                                                                             href="index.html#//apple_ref/c/func/property"
+                                                                                             logicalPath="//apple_ref/c/instm/property //apple_ref/c/clm/property //apple_ref/c/intfcm/property //apple_ref/c/intfm/property //apple_ref/c/func/property"
+                                                                                             target="_top"><span
+        class="function">property</span></a> (
+    <span class="param">nonatomic</span>,
+    <span class="param">readonly</span>,
+    <span
+            class="type">getter</span> = <span class="param">hasEnded</span>)
+    <span
+            class="type">BOOL</span>
+    <span
+            class="var">ended</span>;
+    </pre>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+            <p></p>
+            <p>True if ended, else false
+
+                </p>
+            <hr class="betweenSections">
+            <a name="HeaderDoc_methods"></a>
+            <h2 class="h2tight">Methods</h2>
+            <dl>
+                <dt><tt><a href="index.html#//apple_ref/c/func/allFields" target="_top">+allFields</a></tt></dt>
+                <dd></dd>
+                <dt><tt><a href="index.html#//apple_ref/c/func/clearField:" target="_top">+clearField:</a></tt></dt>
+                <dd></dd>
+                <dt><tt><a href="index.html#//apple_ref/c/func/end" target="_top">+end</a></tt></dt>
+                <dd></dd>
+                <dt><tt><a href="index.html#//apple_ref/c/func/interactive" target="_top">+interactive</a></tt></dt>
+                <dd></dd>
+                <dt><tt><a href="index.html#//apple_ref/c/func/setABTestIdentifier:"
+                           target="_top">+setABTestIdentifier:</a></tt></dt>
+                <dd></dd>
+                <dt><tt><a href="index.html#//apple_ref/c/func/setBrandValue:" target="_top">+setBrandValue:</a></tt>
+                </dt>
+                <dd></dd>
+                <dt><tt><a href="index.html#//apple_ref/c/func/setCampaignMedium:" target="_top">+setCampaignMedium:</a></tt>
+                </dt>
+                <dd></dd>
+                <dt><tt><a href="index.html#//apple_ref/c/func/setCampaignName:"
+                           target="_top">+setCampaignName:</a></tt></dt>
+                <dd></dd>
+                <dt><tt><a href="index.html#//apple_ref/c/func/setCampaignSource:" target="_top">+setCampaignSource:</a></tt>
+                </dt>
+                <dd></dd>
+                <dt><tt><a href="index.html#//apple_ref/c/func/setCartValue:" target="_top">+setCartValue:</a></tt></dt>
+                <dd></dd>
+                <dt><tt><a href="index.html#//apple_ref/c/func/setContentGroupName:"
+                           target="_top">+setContentGroupName:</a></tt></dt>
+                <dd></dd>
+                <dt><tt><a href="index.html#//apple_ref/c/func/setField:boolValue:"
+                           target="_top">+setField:boolValue:</a></tt></dt>
+                <dd></dd>
+                <dt><tt><a href="index.html#//apple_ref/c/func/setField:doubleValue:" target="_top">+setField:doubleValue:</a></tt>
+                </dt>
+                <dd></dd>
+                <dt><tt><a href="index.html#//apple_ref/c/func/setField:floatValue:"
+                           target="_top">+setField:floatValue:</a></tt></dt>
+                <dd></dd>
+                <dt><tt><a href="index.html#//apple_ref/c/func/setField:integerValue:" target="_top">+setField:integerValue:</a></tt>
+                </dt>
+                <dd></dd>
+                <dt><tt><a href="index.html#//apple_ref/c/func/setField:stringValue:" target="_top">+setField:stringValue:</a></tt>
+                </dt>
+                <dd></dd>
+                <dt><tt><a href="index.html#//apple_ref/c/func/setFields:" target="_top">+setFields:</a></tt></dt>
+                <dd></dd>
+                <dt><tt><a href="index.html#//apple_ref/c/func/setOrderNumber:" target="_top">+setOrderNumber:</a></tt>
+                </dt>
+                <dd></dd>
+                <dt><tt><a href="index.html#//apple_ref/c/func/setOrderTime:" target="_top">+setOrderTime:</a></tt></dt>
+                <dd></dd>
+                <dt><tt><a href="index.html#//apple_ref/c/func/setPageName:" target="_top">+setPageName:</a></tt></dt>
+                <dd></dd>
+                <dt><tt><a href="index.html#//apple_ref/c/func/setPageValue:" target="_top">+setPageValue:</a></tt></dt>
+                <dd></dd>
+                <dt><tt><a href="index.html#//apple_ref/c/func/setReferrer:" target="_top">+setReferrer:</a></tt></dt>
+                <dd></dd>
+                <dt><tt><a href="index.html#//apple_ref/c/func/setTimeOnPage:" target="_top">+setTimeOnPage:</a></tt>
+                </dt>
+                <dd></dd>
+                <dt><tt><a href="index.html#//apple_ref/c/func/setTrafficSegmentName:" target="_top">+setTrafficSegmentName:</a></tt>
+                </dt>
+                <dd></dd>
+                <dt><tt><a href="index.html#//apple_ref/c/func/setURL:" target="_top">+setURL:</a></tt></dt>
+                <dd></dd>
+                <dt><tt><a href="index.html#//apple_ref/c/func/start" target="_top">+start</a></tt></dt>
+                <dd></dd>
+                <dt><tt><a href="index.html#//apple_ref/c/func/timer" target="_top">+timer</a></tt></dt>
+                <dd></dd>
+                <dt><tt><a href="index.html#//apple_ref/c/func/timerWithPageName:trafficSegment:" target="_top">+timerWithPageName:trafficSegment:</a></tt>
+                </dt>
+                <dd></dd>
+                <dt><tt><a
+                        href="index.html#//apple_ref/c/func/timerWithPageName:trafficSegment:abTestIdentifier:contentGroupName:"
+                        target="_top">+timerWithPageName:trafficSegment:abTestIdentifier:contentGroupName:</a></tt></dt>
+                <dd></dd>
+            </dl>
+            <hr class="betweenAPIEntries">
+            
+            <a name="//apple_ref/c/func/allFields"></a>
+            <h3><a name="allFields">allFields</a></h3>
+            <hr class="afterName">
+            <div class="declaration_indent">
+                <pre>- (
+                    <span
+                            class="type">NSDictionary</span> <span class="type">*</span>)
+                    <span
+                            class="var">allFields</span>;
+                    </pre>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Return Value</font></h5>
+            <p></p>
+            <p>Returns a Dictionary with all the fields currently.
+
+                </p>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+            <p>Get all
+            the fields currently associated with this timer.
+            
+        </p>
+            <hr class="betweenAPIEntries">
+            
+            <a name="//apple_ref/c/func/clearField:"></a>
+            <h3><a name="clearField:">clearField:</a></h3>
+            <hr class="afterName">
+            <div class="declaration_indent">
+                <pre>- (
+                    <span
+                            class="type">void</span>)
+                    <span
+                            class="function">clearField</span>:(
+                    <span
+                            class="type">NSString</span> <span class="type">*</span>)
+                    <span
+                            class="var">fieldName</span>;
+                    </pre>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+            <div class="param_indent">
+                <dl>
+                    <dt>
+                        
+                        <a name="//apple_ref/doc/methodparam/clearField:/fieldName"></a>
+                        <code>fieldName</code>
+                    </dt>
+                    <dd><p>name of field to remove</p></dd>
+                </dl>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+            <p>
+            Resets a field to the default value if there is one else removes the field completely.
+            
+        </p>
+            <hr class="betweenAPIEntries">
+            
+            <a name="//apple_ref/c/func/end"></a>
+            <h3><a name="end">end</a></h3>
+            <hr class="afterName">
+            <div class="declaration_indent">
+                <pre>- (
+                    <span
+                            class="type">void</span>)
+                    <span
+                            class="var">end</span>;
+                    </pre>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+            <p>End this
+            timer.
+            
+        </p>
+            <hr class="betweenAPIEntries">
+            
+            <a name="//apple_ref/c/func/interactive"></a>
+            <h3><a name="interactive">interactive</a></h3>
+            <hr class="afterName">
+            <div class="declaration_indent">
+                <pre>- (
+                    <span
+                            class="type">void</span>)
+                    <span
+                            class="var">interactive</span>;
+                    </pre>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+            <p>Mark
+            this timer interactive at current time if the timer has been started and not already marked interactive.
+            If the timer has not been started yet, log an error. If the timer has already been marked interactive, log
+            an error.
+            
+        </p>
+            <hr class="betweenAPIEntries">
+            
+            <a name="//apple_ref/c/func/setABTestIdentifier:"></a>
+            <h3><a name="setABTestIdentifier:">setABTestIdentifier:</a></h3>
+            <hr class="afterName">
+            <div class="declaration_indent">
+                <pre>- (
+                    <span
+                            class="type">void</span>)
+                    <span
+                            class="function">setABTestIdentifier</span>:(
+                    <span
+                            class="type">nonnull</span>
+                    <span
+                            class="type">NSString</span> <span class="type">*</span>)
+                    <span
+                            class="var">abTestIdentifier</span>;
+                    </pre>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+            <div class="param_indent">
+                <dl>
+                    <dt>
+                        
+                        <a name="//apple_ref/doc/methodparam/setABTestIdentifier:/abTestIdentifier"></a>
+                        <code>abTestIdentifier</code>
+                    </dt>
+                    <dd><p>the AB test id</p></dd>
+                </dl>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+            
+            <p>Set this timer's AB
+            test identifier
+            
+        </p>
+            <hr class="betweenAPIEntries">
+            
+            <a name="//apple_ref/c/func/setBrandValue:"></a>
+            <h3><a name="setBrandValue:">setBrandValue:</a></h3>
+            <hr class="afterName">
+            <div class="declaration_indent">
+                <pre>- (
+                    <span
+                            class="type">void</span>)
+                    <span
+                            class="function">setBrandValue</span>:(
+                    <span
+                            class="type">double</span>)
+                    <span
+                            class="var">brandValue</span>;
+                    </pre>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+            <div class="param_indent">
+                <dl>
+                    <dt>
+                        
+                        <a name="//apple_ref/doc/methodparam/setBrandValue:/brandValue"></a>
+                        <code>brandValue</code>
+                    </dt>
+                    <dd><p>brand's value</p></dd>
+                </dl>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+            <p>
+            Set the brand value of this timer
+            
+        </p>
+            <hr class="betweenAPIEntries">
+            
+            <a name="//apple_ref/c/func/setCampaignMedium:"></a>
+            <h3><a name="setCampaignMedium:">setCampaignMedium:</a></h3>
+            <hr class="afterName">
+            <div class="declaration_indent">
+                <pre>- (
+                    <span
+                            class="type">void</span>)
+                    <span
+                            class="function">setCampaignMedium</span>:(
+                    <span
+                            class="type">nonnull</span>
+                    <span
+                            class="type">NSString</span> <span class="type">*</span>)
+                    <span
+                            class="var">campaignMedium</span>;
+                    </pre>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+            <div class="param_indent">
+                <dl>
+                    <dt>
+                        
+                        <a name="//apple_ref/doc/methodparam/setCampaignMedium:/campaignMedium"></a>
+                        <code>campaignMedium</code>
+                    </dt>
+                    <dd><p>medium of campaign</p></dd>
+                </dl>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+            
+            <p>Set the medium of the campaign
+                
+            </p>
+            <hr class="betweenAPIEntries">
+            
+            <a name="//apple_ref/c/func/setCampaignName:"></a>
+            <h3><a name="setCampaignName:">setCampaignName:</a></h3>
+            <hr class="afterName">
+            <div class="declaration_indent">
+                <pre>- (
+                    <span
+                            class="type">void</span>)
+                    <span
+                            class="function">setCampaignName</span>:(
+                    <span
+                            class="type">nonnull</span>
+                    <span
+                            class="type">NSString</span> <span class="type">*</span>)
+                    <span
+                            class="var">campaignName</span>;
+                    </pre>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+            <div class="param_indent">
+                <dl>
+                    <dt>
+                        
+                        <a name="//apple_ref/doc/methodparam/setCampaignName:/campaignName"></a>
+                        <code>campaignName</code>
+                    </dt>
+                    <dd><p>name of campaign</p></dd>
+                </dl>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+            <p>
+            Set the name of the campaign
+            
+        </p>
+            <hr class="betweenAPIEntries">
+            
+            <a name="//apple_ref/c/func/setCampaignSource:"></a>
+            <h3><a name="setCampaignSource:">setCampaignSource:</a></h3>
+            <hr class="afterName">
+            <div class="declaration_indent">
+                <pre>- (
+                    <span
+                            class="type">void</span>)
+                    <span
+                            class="function">setCampaignSource</span>:(
+                    <span
+                            class="type">nonnull</span>
+                    <span
+                            class="type">NSString</span> <span class="type">*</span>)
+                    <span
+                            class="var">campaignSource</span>;
+                    </pre>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+            <div class="param_indent">
+                <dl>
+                    <dt>
+                        
+                        <a name="//apple_ref/doc/methodparam/setCampaignSource:/campaignSource"></a>
+                        <code>campaignSource</code>
+                    </dt>
+                    <dd><p>source of campaign</p></dd>
+                </dl>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+            
+            <p>Set the source of the campaign
+                
+            </p>
+            <hr class="betweenAPIEntries">
+            
+            <a name="//apple_ref/c/func/setCartValue:"></a>
+            <h3><a name="setCartValue:">setCartValue:</a></h3>
+            <hr class="afterName">
+            <div class="declaration_indent">
+                <pre>- (
+                    <span
+                            class="type">void</span>)
+                    <span
+                            class="function">setCartValue</span>:(
+                    <span
+                            class="type">double</span>)
+                    <span
+                            class="var">cartValue</span>;
+                    </pre>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+            <div class="param_indent">
+                <dl>
+                    <dt>
+                        
+                        <a name="//apple_ref/doc/methodparam/setCartValue:/cartValue"></a>
+                        <code>cartValue</code>
+                    </dt>
+                    <dd><p>value of cart</p></dd>
+                </dl>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+            <p>Set
+            the value of the cart for this timer
+            
+        </p>
+            <hr class="betweenAPIEntries">
+            
+            <a name="//apple_ref/c/func/setContentGroupName:"></a>
+            <h3><a name="setContentGroupName:">setContentGroupName:</a></h3>
+            <hr class="afterName">
+            <div class="declaration_indent">
+                <pre>- (
+                    <span
+                            class="type">void</span>)
+                    <span
+                            class="function">setContentGroupName</span>:(
+                    <span
+                            class="type">nonnull</span>
+                    <span
+                            class="type">NSString</span> <span class="type">*</span>)
+                    <span
+                            class="var">contentGroupName</span>;
+                    </pre>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+            <div class="param_indent">
+                <dl>
+                    <dt>
+                        
+                        <a name="//apple_ref/doc/methodparam/setContentGroupName:/contentGroupName"></a>
+                        <code>contentGroupName</code>
+                    </dt>
+                    <dd><p>name of content group or page type</p></dd>
+                </dl>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+            
+            <p>Set the content group
+            name or page type for this timer
+            
+        </p>
+            <hr class="betweenAPIEntries">
+            
+            <a name="//apple_ref/c/func/setField:boolValue:"></a>
+            <h3><a name="setField:boolValue:">setField:boolValue:</a></h3>
+            <hr class="afterName">
+            <div class="declaration_indent">
+                <pre>- (
+                    <span
+                            class="type">void</span>)
+                    <span
+                            class="function">setField</span>:(
+                    <span
+                            class="type">nonnull</span>
+                    <span
+                            class="type">NSString</span> <span class="type">*</span>)<span class="param">fieldName</span> <a
+                            machinegenerated="true"
+                            href="index.html#//apple_ref/doc/methodparam/setField:boolValue:/boolValue"
+                            logicalPath="//apple_ref/c/instm/boolValue //apple_ref/c/clm/boolValue //apple_ref/c/intfcm/boolValue //apple_ref/c/intfm/boolValue //apple_ref/c/func/boolValue //apple_ref/c/ftmplt/boolValue //apple_ref/c/defn/boolValue //apple_ref/c/macro/boolValue //apple_ref/doc/anysymbol/boolValue"
+                            target="_top"><span class="function">boolValue</span></a>:(
+                    <span
+                            class="type">BOOL</span>)
+                    <span
+                            class="var">boolValue</span>;
+                    </pre>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+            <div class="param_indent">
+                <dl>
+                    <dt>
+                        
+                        <a name="//apple_ref/doc/methodparam/setField:boolValue:/fieldName"></a>
+                        <code>fieldName</code>
+                    </dt>
+                    <dd><p>The name of the field to set</p></dd>
+                    <dt>
+                        
+                        <a name="//apple_ref/doc/methodparam/setField:boolValue:/boolValue"></a>
+                        <code>boolValue</code>
+                    </dt>
+                    <dd><p>The value to set for the given field</p></dd>
+                </dl>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+            
+            <p>Sets a field name with the given value
+                
+            </p>
+            <hr class="betweenAPIEntries">
+            
+            <a name="//apple_ref/c/func/setField:doubleValue:"></a>
+            <h3><a name="setField:doubleValue:">setField:doubleValue:</a></h3>
+            <hr class="afterName">
+            <div class="declaration_indent">
+                <pre>- (
+                    <span
+                            class="type">void</span>)
+                    <span
+                            class="function">setField</span>:(
+                    <span
+                            class="type">nonnull</span>
+                    <span
+                            class="type">NSString</span> <span class="type">*</span>)<span class="param">fieldName</span> <a
+                            machinegenerated="true"
+                            href="index.html#//apple_ref/doc/methodparam/setField:doubleValue:/doubleValue"
+                            logicalPath="//apple_ref/c/instm/doubleValue //apple_ref/c/clm/doubleValue //apple_ref/c/intfcm/doubleValue //apple_ref/c/intfm/doubleValue //apple_ref/c/func/doubleValue //apple_ref/c/ftmplt/doubleValue //apple_ref/c/defn/doubleValue //apple_ref/c/macro/doubleValue //apple_ref/doc/anysymbol/doubleValue"
+                            target="_top"><span class="function">doubleValue</span></a>:(
+                    <span
+                            class="type">double</span>)
+                    <span
+                            class="var">doubleValue</span>;
+                    </pre>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+            <div class="param_indent">
+                <dl>
+                    <dt>
+                        
+                        <a name="//apple_ref/doc/methodparam/setField:doubleValue:/fieldName"></a>
+                        <code>fieldName</code>
+                    </dt>
+                    <dd><p>The name of the field to set</p></dd>
+                    <dt>
+                        
+                        <a name="//apple_ref/doc/methodparam/setField:doubleValue:/doubleValue"></a>
+                        <code>doubleValue</code>
+                    </dt>
+                    <dd><p>The value to set for the given field</p></dd>
+                </dl>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+            
+            <p>Sets a field name
+            with the given value
+            
+        </p>
+            <hr class="betweenAPIEntries">
+            
+            <a name="//apple_ref/c/func/setField:floatValue:"></a>
+            <h3><a name="setField:floatValue:">setField:floatValue:</a></h3>
+            <hr class="afterName">
+            <div class="declaration_indent">
+                <pre>- (
+                    <span
+                            class="type">void</span>)
+                    <span
+                            class="function">setField</span>:(
+                    <span
+                            class="type">nonnull</span>
+                    <span
+                            class="type">NSString</span> <span class="type">*</span>)<span class="param">fieldName</span> <a
+                            machinegenerated="true"
+                            href="index.html#//apple_ref/doc/methodparam/setField:floatValue:/floatValue"
+                            logicalPath="//apple_ref/c/instm/floatValue //apple_ref/c/clm/floatValue //apple_ref/c/intfcm/floatValue //apple_ref/c/intfm/floatValue //apple_ref/c/func/floatValue //apple_ref/c/ftmplt/floatValue //apple_ref/c/defn/floatValue //apple_ref/c/macro/floatValue //apple_ref/doc/anysymbol/floatValue"
+                            target="_top"><span class="function">floatValue</span></a>:(
+                    <span
+                            class="type">float</span>)
+                    <span
+                            class="var">floatValue</span>;
+                    </pre>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+            <div class="param_indent">
+                <dl>
+                    <dt>
+                        
+                        <a name="//apple_ref/doc/methodparam/setField:floatValue:/fieldName"></a>
+                        <code>fieldName</code>
+                    </dt>
+                    <dd><p>The name of the field to set</p></dd>
+                    <dt>
+                        
+                        <a name="//apple_ref/doc/methodparam/setField:floatValue:/floatValue"></a>
+                        <code>floatValue</code>
+                    </dt>
+                    <dd><p>The value to set for the given field</p></dd>
+                </dl>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+            
+            <p>Sets a field name
+            with the given value
+            
+        </p>
+            <hr class="betweenAPIEntries">
+            
+            <a name="//apple_ref/c/func/setField:integerValue:"></a>
+            <h3><a name="setField:integerValue:">setField:integerValue:</a></h3>
+            <hr class="afterName">
+            <div class="declaration_indent">
+                <pre>- (
+                    <span
+                            class="type">void</span>)
+                    <span
+                            class="function">setField</span>:(
+                    <span
+                            class="type">nonnull</span>
+                    <span
+                            class="type">NSString</span> <span class="type">*</span>)<span class="param">fieldName</span> <a
+                            machinegenerated="true"
+                            href="index.html#//apple_ref/doc/methodparam/setField:integerValue:/integerValue"
+                            logicalPath="//apple_ref/c/instm/integerValue //apple_ref/c/clm/integerValue //apple_ref/c/intfcm/integerValue //apple_ref/c/intfm/integerValue //apple_ref/c/func/integerValue //apple_ref/c/ftmplt/integerValue //apple_ref/c/defn/integerValue //apple_ref/c/macro/integerValue //apple_ref/doc/anysymbol/integerValue"
+                            target="_top"><span class="function">integerValue</span></a>:(
+                    <span
+                            class="type">NSInteger</span>)
+                    <span
+                            class="var">integerValue</span>;
+                    </pre>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+            <div class="param_indent">
+                <dl>
+                    <dt>
+                        
+                        <a name="//apple_ref/doc/methodparam/setField:integerValue:/fieldName"></a>
+                        <code>fieldName</code>
+                    </dt>
+                    <dd><p>The name of the field to set</p></dd>
+                    <dt>
+                        
+                        <a name="//apple_ref/doc/methodparam/setField:integerValue:/integerValue"></a>
+                        <code>integerValue</code>
+                    </dt>
+                    <dd><p>The value to set for the given field</p></dd>
+                </dl>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+            
+            <p>Sets a field name
+            with the given value
+            
+        </p>
+            <hr class="betweenAPIEntries">
+            
+            <a name="//apple_ref/c/func/setField:stringValue:"></a>
+            <h3><a name="setField:stringValue:">setField:stringValue:</a></h3>
+            <hr class="afterName">
+            <div class="declaration_indent">
+                <pre>- (
+                    <span
+                            class="type">void</span>)
+                    <span
+                            class="function">setField</span>:(
+                    <span
+                            class="type">nonnull</span>
+                    <span
+                            class="type">NSString</span> <span class="type">*</span>)<span class="param">fieldName</span> <a
+                            machinegenerated="true"
+                            href="index.html#//apple_ref/doc/methodparam/setField:stringValue:/stringValue"
+                            logicalPath="//apple_ref/c/instm/stringValue //apple_ref/c/clm/stringValue //apple_ref/c/intfcm/stringValue //apple_ref/c/intfm/stringValue //apple_ref/c/func/stringValue //apple_ref/c/ftmplt/stringValue //apple_ref/c/defn/stringValue //apple_ref/c/macro/stringValue //apple_ref/doc/anysymbol/stringValue"
+                            target="_top"><span class="function">stringValue</span></a>:(
+                    <span
+                            class="type">nonnull</span>
+                    <span
+                            class="type">NSString</span> <span class="type">*</span>)
+                    <span
+                            class="var">stringValue</span>;
+                    </pre>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+            <div class="param_indent">
+                <dl>
+                    <dt>
+                        
+                        <a name="//apple_ref/doc/methodparam/setField:stringValue:/fieldName"></a>
+                        <code>fieldName</code>
+                    </dt>
+                    <dd><p>The name of the field to set</p></dd>
+                    <dt>
+                        
+                        <a name="//apple_ref/doc/methodparam/setField:stringValue:/stringValue"></a>
+                        <code>stringValue</code>
+                    </dt>
+                    <dd><p>The value to set for the given field</p></dd>
+                </dl>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+            
+            <p>Sets a field name
+            with the given value
+            
+        </p>
+            <hr class="betweenAPIEntries">
+            
+            <a name="//apple_ref/c/func/setFields:"></a>
+            <h3><a name="setFields:">setFields:</a></h3>
+            <hr class="afterName">
+            <div class="declaration_indent">
+                <pre>- (
+                    <span
+                            class="type">void</span>)
+                    <span
+                            class="function">setFields</span>:(
+                    <span
+                            class="type">nonnull</span>
+                    <span
+                            class="type">NSDictionary</span> <span class="type">*</span>)
+                    <span
+                            class="var">fields</span>;
+                    </pre>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+            <div class="param_indent">
+                <dl>
+                    <dt>
+                        
+                        <a name="//apple_ref/doc/methodparam/setFields:/fields"></a>
+                        <code>fields</code>
+                    </dt>
+                    <dd><p>The fields to set on this timer</p></dd>
+                </dl>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+            <p>Allows
+            the setting of multiple fields via a Dictionary
+            
+        </p>
+            <hr class="betweenAPIEntries">
+            
+            <a name="//apple_ref/c/func/setOrderNumber:"></a>
+            <h3><a name="setOrderNumber:">setOrderNumber:</a></h3>
+            <hr class="afterName">
+            <div class="declaration_indent">
+                <pre>- (
+                    <span
+                            class="type">void</span>)
+                    <span
+                            class="function">setOrderNumber</span>:(
+                    <span
+                            class="type">nonnull</span>
+                    <span
+                            class="type">NSString</span> <span class="type">*</span>)
+                    <span
+                            class="var">orderNumber</span>;
+                    </pre>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+            <div class="param_indent">
+                <dl>
+                    <dt>
+                        
+                        <a name="//apple_ref/doc/methodparam/setOrderNumber:/orderNumber"></a>
+                        <code>orderNumber</code>
+                    </dt>
+                    <dd><p>order number</p></dd>
+                </dl>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+            <p>
+            Set the order number for this timer
+            
+        </p>
+            <hr class="betweenAPIEntries">
+            
+            <a name="//apple_ref/c/func/setOrderTime:"></a>
+            <h3><a name="setOrderTime:">setOrderTime:</a></h3>
+            <hr class="afterName">
+            <div class="declaration_indent">
+                <pre>- (
+                    <span
+                            class="type">void</span>)
+                    <span
+                            class="function">setOrderTime</span>:(
+                    <span
+                            class="type">NSInteger</span>)
+                    <span
+                            class="var">orderTime</span>;
+                    </pre>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+            <div class="param_indent">
+                <dl>
+                    <dt>
+                        
+                        <a name="//apple_ref/doc/methodparam/setOrderTime:/orderTime"></a>
+                        <code>orderTime</code>
+                    </dt>
+                    <dd><p>epoch time of order in milliseconds</p></dd>
+                </dl>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+            <p>Set
+            the time of the order
+            
+        </p>
+            <hr class="betweenAPIEntries">
+            
+            <a name="//apple_ref/c/func/setPageName:"></a>
+            <h3><a name="setPageName:">setPageName:</a></h3>
+            <hr class="afterName">
+            <div class="declaration_indent">
+                <pre>- (
+                    <span
+                            class="type">void</span>)
+                    <span
+                            class="function">setPageName</span>:(
+                    <span
+                            class="type">nonnull</span>
+                    <span
+                            class="type">NSString</span> <span class="type">*</span>)
+                    <span
+                            class="var">pageName</span>;
+                    </pre>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+            <div class="param_indent">
+                <dl>
+                    <dt>
+                        
+                        <a name="//apple_ref/doc/methodparam/setPageName:/pageName"></a>
+                        <code>pageName</code>
+                    </dt>
+                    <dd><p>name of the page for this timer</p></dd>
+                </dl>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+            <p>Set
+            the timer's page name
+            
+        </p>
+            <hr class="betweenAPIEntries">
+            
+            <a name="//apple_ref/c/func/setPageValue:"></a>
+            <h3><a name="setPageValue:">setPageValue:</a></h3>
+            <hr class="afterName">
+            <div class="declaration_indent">
+                <pre>- (
+                    <span
+                            class="type">void</span>)
+                    <span
+                            class="function">setPageValue</span>:(
+                    <span
+                            class="type">double</span>)
+                    <span
+                            class="var">pageValue</span>;
+                    </pre>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+            <div class="param_indent">
+                <dl>
+                    <dt>
+                        
+                        <a name="//apple_ref/doc/methodparam/setPageValue:/pageValue"></a>
+                        <code>pageValue</code>
+                    </dt>
+                    <dd><p>value of page</p></dd>
+                </dl>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+            <p>Set
+            the value of this page/timer
+            
+        </p>
+            <hr class="betweenAPIEntries">
+            
+            <a name="//apple_ref/c/func/setReferrer:"></a>
+            <h3><a name="setReferrer:">setReferrer:</a></h3>
+            <hr class="afterName">
+            <div class="declaration_indent">
+                <pre>- (
+                    <span
+                            class="type">void</span>)
+                    <span
+                            class="function">setReferrer</span>:(
+                    <span
+                            class="type">nonnull</span>
+                    <span
+                            class="type">NSString</span> <span class="type">*</span>)
+                    <span
+                            class="var">referrer</span>;
+                    </pre>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+            <div class="param_indent">
+                <dl>
+                    <dt>
+                        
+                        <a name="//apple_ref/doc/methodparam/setReferrer:/referrer"></a>
+                        <code>referrer</code>
+                    </dt>
+                    <dd><p>the referrer URL</p></dd>
+                </dl>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+            <p>Set
+            the referrer URL for this timer
+            
+        </p>
+            <hr class="betweenAPIEntries">
+            
+            <a name="//apple_ref/c/func/setTimeOnPage:"></a>
+            <h3><a name="setTimeOnPage:">setTimeOnPage:</a></h3>
+            <hr class="afterName">
+            <div class="declaration_indent">
+                <pre>- (
+                    <span
+                            class="type">void</span>)
+                    <span
+                            class="function">setTimeOnPage</span>:(
+                    <span
+                            class="type">NSInteger</span>)
+                    <span
+                            class="var">timeOnPage</span>;
+                    </pre>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+            <div class="param_indent">
+                <dl>
+                    <dt>
+                        
+                        <a name="//apple_ref/doc/methodparam/setTimeOnPage:/timeOnPage"></a>
+                        <code>timeOnPage</code>
+                    </dt>
+                    <dd><p>time on page in milliseconds</p></dd>
+                </dl>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+            <p>
+            Set time on page for this timer
+            
+        </p>
+            <hr class="betweenAPIEntries">
+            
+            <a name="//apple_ref/c/func/setTrafficSegmentName:"></a>
+            <h3><a name="setTrafficSegmentName:">setTrafficSegmentName:</a></h3>
+            <hr class="afterName">
+            <div class="declaration_indent">
+                <pre>- (
+                    <span
+                            class="type">void</span>)
+                    <span
+                            class="function">setTrafficSegmentName</span>:(
+                    <span
+                            class="type">nonnull</span>
+                    <span
+                            class="type">NSString</span> <span class="type">*</span>)
+                    <span
+                            class="var">trafficSegmentName</span>;
+                    </pre>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+            <div class="param_indent">
+                <dl>
+                    <dt>
+                        
+                        <a name="//apple_ref/doc/methodparam/setTrafficSegmentName:/trafficSegmentName"></a>
+                        <code>trafficSegmentName</code>
+                    </dt>
+                    <dd><p>name of the traffic segment for this timer</p></dd>
+                </dl>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+            
+            <p>Set the timer's
+            traffic segment name
+            
+        </p>
+            <hr class="betweenAPIEntries">
+            
+            <a name="//apple_ref/c/func/setURL:"></a>
+            <h3><a name="setURL:">setURL:</a></h3>
+            <hr class="afterName">
+            <div class="declaration_indent">
+                <pre>- (
+                    <span
+                            class="type">void</span>)
+                    <span
+                            class="function">setURL</span>:(
+                    <span
+                            class="type">nonnull</span>
+                    <span
+                            class="type">NSString</span> <span class="type">*</span>)
+                    <span
+                            class="var">url</span>;
+                    </pre>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+            <div class="param_indent">
+                <dl>
+                    <dt>
+                        
+                        <a name="//apple_ref/doc/methodparam/setURL:/url"></a>
+                        <code>url</code>
+                    </dt>
+                    <dd><p>the url for this timer</p></dd>
+                </dl>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+            <p>Set the
+            URL for this timer
+            
+        </p>
+            <hr class="betweenAPIEntries">
+            
+            <a name="//apple_ref/c/func/start"></a>
+            <h3><a name="start">start</a></h3>
+            <hr class="afterName">
+            <div class="declaration_indent">
+                <pre>- (
+                    <span
+                            class="type">void</span>)
+                    <span
+                            class="var">start</span>;
+                    </pre>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+            <p>Start this
+            timer if not already started. If already started, will log an error.
+            
+        </p>
+            <hr class="betweenAPIEntries">
+            
+            <a name="//apple_ref/c/func/timer"></a>
+            <h3><a name="timer">timer</a></h3>
+            <hr class="afterName">
+            <div class="declaration_indent">
+                <pre>+ (
+                    <span
+                            class="type">nonnull</span>
+                    <span
+                            class="type">BTTimer</span> <span class="type">*</span>)
+                    <span
+                            class="var">timer</span>;
+                    </pre>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+            <p>NOTE - Page
+            name or Traffic segment name will need to be set later before submitting the timer.
+            
+        </p>
+            <hr class="betweenAPIEntries">
+            
+            <a name="//apple_ref/c/func/timerWithPageName:trafficSegment:"></a>
+            <h3><a name="timerWithPageName:trafficSegment:">timerWithPageName:trafficSegment:</a></h3>
+            <hr class="afterName">
+            <div class="declaration_indent">
+<pre>+ (
+    <span
+            class="type">nonnull</span>
+    <span
+            class="type">BTTimer</span> <span class="type">*</span>)
+    <span
+            class="function">timerWithPageName</span>:(
+    <span
+            class="type">nonnull</span>
+    <span
+            class="type">NSString</span> <span class="type">*</span>)<span class="param">pageName</span>
+        <a machinegenerated="true"
+           href="index.html#//apple_ref/doc/methodparam/timerWithPageName:trafficSegment:abTestIdentifier:contentGroupName:/trafficSegment"
+           logicalPath="//apple_ref/c/instm/trafficSegment //apple_ref/c/clm/trafficSegment //apple_ref/c/intfcm/trafficSegment //apple_ref/c/intfm/trafficSegment //apple_ref/c/func/trafficSegment //apple_ref/c/ftmplt/trafficSegment //apple_ref/c/defn/trafficSegment //apple_ref/c/macro/trafficSegment //apple_ref/doc/anysymbol/trafficSegment"
+           target="_top"><span class="function">trafficSegment</span></a>:(
+    <span
+            class="type">nonnull</span>
+    <span
+            class="type">NSString</span> <span class="type">*</span>)
+    <span
+            class="var">trafficSegment</span>;
+    </pre>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+            <div class="param_indent">
+                <dl>
+                    <dt>
+                        
+                        <a name="//apple_ref/doc/methodparam/timerWithPageName:trafficSegment:/pageName"></a>
+                        <code>pageName</code>
+                    </dt>
+                    <dd><p>The page name</p></dd>
+                    <dt>
+                        
+                        <a name="//apple_ref/doc/methodparam/timerWithPageName:trafficSegment:/trafficSegment"></a>
+                        <code>trafficSegment</code>
+                    </dt>
+                    <dd><p>The traffic segment name</p></dd>
+                </dl>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+            
+            <p>Create a
+            timer instance with the given page name and traffic segment name
+            
+            
+        </p>
+            <hr class="betweenAPIEntries">
+            
+            <a name="//apple_ref/c/func/timerWithPageName:trafficSegment:abTestIdentifier:contentGroupName:"></a>
+            <h3><a name="timerWithPageName:trafficSegment:abTestIdentifier:contentGroupName:">timerWithPageName:trafficSegment:abTestIdentifier:contentGroupName:</a>
+            </h3>
+            <hr class="afterName">
+            <div class="declaration_indent">
+<pre>+ (
+    <span
+            class="type">nonnull</span>
+    <span
+            class="type">BTTimer</span> <span class="type">*</span>)
+    <span
+            class="function">timerWithPageName</span>:(
+    <span
+            class="type">nonnull</span>
+    <span
+            class="type">NSString</span> <span class="type">*</span>)<span class="param">pageName</span>
+        <a machinegenerated="true"
+           href="index.html#//apple_ref/doc/methodparam/timerWithPageName:trafficSegment:abTestIdentifier:contentGroupName:/trafficSegment"
+           logicalPath="//apple_ref/c/instm/trafficSegment //apple_ref/c/clm/trafficSegment //apple_ref/c/intfcm/trafficSegment //apple_ref/c/intfm/trafficSegment //apple_ref/c/func/trafficSegment //apple_ref/c/ftmplt/trafficSegment //apple_ref/c/defn/trafficSegment //apple_ref/c/macro/trafficSegment //apple_ref/doc/anysymbol/trafficSegment"
+           target="_top"><span class="function">trafficSegment</span></a>:(
+    <span
+            class="type">nonnull</span>
+    <span
+            class="type">NSString</span> <span class="type">*</span>)<span
+            class="param">trafficSegment</span>
+        <a machinegenerated="true"
+           href="index.html#//apple_ref/doc/methodparam/timerWithPageName:trafficSegment:abTestIdentifier:contentGroupName:/abTestIdentifier"
+           logicalPath="//apple_ref/c/instm/abTestIdentifier //apple_ref/c/clm/abTestIdentifier //apple_ref/c/intfcm/abTestIdentifier //apple_ref/c/intfm/abTestIdentifier //apple_ref/c/func/abTestIdentifier //apple_ref/c/ftmplt/abTestIdentifier //apple_ref/c/defn/abTestIdentifier //apple_ref/c/macro/abTestIdentifier //apple_ref/doc/anysymbol/abTestIdentifier"
+           target="_top"><span class="function">abTestIdentifier</span></a>:(
+    <span
+            class="type">nullable</span>
+    <span
+            class="type">NSString</span> <span class="type">*</span>)<span
+            class="param">abTestIdentifier</span>
+        <a machinegenerated="true"
+           href="index.html#//apple_ref/doc/methodparam/timerWithPageName:trafficSegment:abTestIdentifier:contentGroupName:/contentGroupName"
+           logicalPath="//apple_ref/c/instm/contentGroupName //apple_ref/c/clm/contentGroupName //apple_ref/c/intfcm/contentGroupName //apple_ref/c/intfm/contentGroupName //apple_ref/c/func/contentGroupName //apple_ref/c/ftmplt/contentGroupName //apple_ref/c/defn/contentGroupName //apple_ref/c/macro/contentGroupName //apple_ref/doc/anysymbol/contentGroupName"
+           target="_top"><span class="function">contentGroupName</span></a>:(
+    <span
+            class="type">nullable</span>
+    <span
+            class="type">NSString</span> <span class="type">*</span>)
+    <span
+            class="var">contentGroupName</span>;
+    </pre>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Parameters</font></h5>
+            <div class="param_indent">
+                <dl>
+                    <dt>
+                        
+                        <a name="//apple_ref/doc/methodparam/timerWithPageName:trafficSegment:abTestIdentifier:contentGroupName:/pageName"></a>
+                        <code>pageName</code>
+                    </dt>
+                    <dd><p>The page name</p></dd>
+                    <dt>
+                        
+                        <a name="//apple_ref/doc/methodparam/timerWithPageName:trafficSegment:abTestIdentifier:contentGroupName:/trafficSegment"></a>
+                        <code>trafficSegment</code>
+                    </dt>
+                    <dd><p>The traffic segment name</p></dd>
+                    <dt>
+                        
+                        <a name="//apple_ref/doc/methodparam/timerWithPageName:trafficSegment:abTestIdentifier:contentGroupName:/abTestIdentifier"></a>
+                        <code>abTestIdentifier</code>
+                    </dt>
+                    <dd><p>The AB test id</p></dd>
+                    <dt>
+                        
+                        <a name="//apple_ref/doc/methodparam/timerWithPageName:trafficSegment:abTestIdentifier:contentGroupName:/contentGroupName"></a>
+                        <code>contentGroupName</code>
+                    </dt>
+                    <dd><p>The content group name</p></dd>
+                </dl>
+            </div>
+            <h5 class="tight"><font face="Lucida Grande,Helvetica,Arial">Discussion</font></h5>
+            
+            
+            <p>Create a timer instance with the given page name, traffic segment name, optional AB test id, and optional
+                content group name.
+                
+                
+            </p>
+            <p class="gapBeforeFooter">&nbsp;</p>
+            
+
+            
+            <hr class="afterFooter">
+            <div class="hd_copyright_and_timestamp">
+                <p class="hd_timestamp">Last Updated: Monday, July 30, 2018
+                </p>
+            </div>
+        </td>
+    </tr>
+</table>
+</body>
+</html>
