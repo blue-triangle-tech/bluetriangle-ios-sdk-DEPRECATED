@@ -6,40 +6,30 @@
 //  Copyright (c) 2020 julianduranmt@yahoo.com. All rights reserved.
 //
 
-// https://github.com/kiwi-bdd/Kiwi
+@import XCTest;
 
-SPEC_BEGIN(InitialTests)
+@interface Tests : XCTestCase
 
-describe(@"My initial tests", ^{
+@end
 
-  context(@"will fail", ^{
+@implementation Tests
 
-      it(@"can do maths", ^{
-          [[@1 should] equal:@2];
-      });
+- (void)setUp
+{
+    [super setUp];
+    // Put setup code here. This method is called before the invocation of each test method in the class.
+}
 
-      it(@"can read", ^{
-          [[@"number" should] equal:@"string"];
-      });
-    
-      it(@"will wait and fail", ^{
-          NSObject *object = [[NSObject alloc] init];
-          [[expectFutureValue(object) shouldEventually] receive:@selector(autoContentAccessingProxy)];
-      });
-  });
+- (void)tearDown
+{
+    // Put teardown code here. This method is called after the invocation of each test method in the class.
+    [super tearDown];
+}
 
-  context(@"will pass", ^{
-    
-      it(@"can do maths", ^{
-        [[@1 should] beLessThan:@23];
-      });
-    
-      it(@"can read", ^{
-          [[@"team" shouldNot] containString:@"I"];
-      });  
-  });
-  
-});
+- (void)testExample
+{
+    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+}
 
-SPEC_END
+@end
 

@@ -8,7 +8,6 @@ target 'BlueTriangleSDK_Example' do
   target 'BlueTriangleSDK_Tests' do
     inherit! :search_paths
 
-    pod 'Kiwi'
-    pod 'FBSnapshotTestCase'
+    
   end
 end

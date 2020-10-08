@@ -1,21 +1,8 @@
 PODS:
   - BlueTriangleSDK (0.1.0)
-  - FBSnapshotTestCase (2.1.4):
-    - FBSnapshotTestCase/SwiftSupport (= 2.1.4)
-  - FBSnapshotTestCase/Core (2.1.4)
-  - FBSnapshotTestCase/SwiftSupport (2.1.4):
-    - FBSnapshotTestCase/Core
-  - Kiwi (3.0.0)
 
 DEPENDENCIES:
   - BlueTriangleSDK (from `../`)
-  - FBSnapshotTestCase
-  - Kiwi
-
-SPEC REPOS:
-  trunk:
-    - FBSnapshotTestCase
-    - Kiwi
 
 EXTERNAL SOURCES:
   BlueTriangleSDK:
@@ -23,9 +10,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   BlueTriangleSDK: 227a43ce364896eaa40b496625452cc7c38a12cc
-  FBSnapshotTestCase: 094f9f314decbabe373b87cc339bea235a63e07a
-  Kiwi: fbeafef0f00e4d8f7dcb3420a4930afe70af77f7
 
-PODFILE CHECKSUM: ee6476d0a89f0d33fe5afd105e4af37dbe2c4440
+PODFILE CHECKSUM: 9b89b61c2417e315bc98c75d7fb15c035f7d04b6
 
 COCOAPODS: 1.9.3
