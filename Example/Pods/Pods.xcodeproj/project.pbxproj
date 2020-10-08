@@ -160,7 +160,7 @@
 		518D91682EB7A4F7A9BAB8939BE0D74E /* BlueTriangleSDK */ = {
 			isa = PBXGroup;
 			children = (
-				E50931D7252F914A009B5E4D /* Classes */,
+				E50931E5252FABC4009B5E4D /* 0.1.0 */,
 				2E6C812AE1BC86CD5137D409ED0C21EF /* Pod */,
 				E8D827EA7A0AEA16C483DD38454BF497 /* Support Files */,
 			);
@@ -247,6 +247,14 @@
 				E5605DA8252F8B88008DBECE /* BTTracker.m */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		E50931E5252FABC4009B5E4D /* 0.1.0 */ = {
+			isa = PBXGroup;
+			children = (
+				E50931D7252F914A009B5E4D /* Classes */,
+			);
+			path = 0.1.0;
 			sourceTree = "<group>";
 		};
 		E8D827EA7A0AEA16C483DD38454BF497 /* Support Files */ = {
