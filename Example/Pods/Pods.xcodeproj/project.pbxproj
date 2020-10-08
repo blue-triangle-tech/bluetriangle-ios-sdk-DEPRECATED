@@ -160,13 +160,7 @@
 		518D91682EB7A4F7A9BAB8939BE0D74E /* BlueTriangleSDK */ = {
 			isa = PBXGroup;
 			children = (
-				E5605DB1252F8B88008DBECE /* BlueTriangle.h */,
-				E5605DB2252F8B88008DBECE /* BTTimer.h */,
-				E5605DB0252F8B88008DBECE /* BTTimer.m */,
-				E5605DA4252F8B87008DBECE /* BTTracker.h */,
-				E5605DA8252F8B88008DBECE /* BTTracker.m */,
-				E5605DA5252F8B87008DBECE /* Resources */,
-				E5605DA9252F8B88008DBECE /* Utils */,
+				E50931D7252F914A009B5E4D /* Classes */,
 				2E6C812AE1BC86CD5137D409ED0C21EF /* Pod */,
 				E8D827EA7A0AEA16C483DD38454BF497 /* Support Files */,
 			);
@@ -234,6 +228,20 @@
 				C0834CEBB1379A84116EF29F93051C60 /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E50931D7252F914A009B5E4D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E5605DA9252F8B88008DBECE /* Utils */,
+				E5605DA5252F8B87008DBECE /* Resources */,
+				E5605DB1252F8B88008DBECE /* BlueTriangle.h */,
+				E5605DB2252F8B88008DBECE /* BTTimer.h */,
+				E5605DB0252F8B88008DBECE /* BTTimer.m */,
+				E5605DA4252F8B87008DBECE /* BTTracker.h */,
+				E5605DA8252F8B88008DBECE /* BTTracker.m */,
+			);
+			path = Classes;
 			sourceTree = "<group>";
 		};
 		E5605DA5252F8B87008DBECE /* Resources */ = {

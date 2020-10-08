@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   BlueTriangleSDK exposes methods to collect and send analytics to the BTT portal via an HTTP post
                        DESC
 
-  s.homepage         = 'https://github.com/blue-triangle-tech/bluetriangle-ios-sdk'
+  s.homepage         = 'http://www.bluetriangle.com'
   # s.screenshots     = ''
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Julian Wilkison-Duran' => 'julian.wilkison@bluetriangle.com' }
