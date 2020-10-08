@@ -1,0 +1,6 @@
+framework module BlueTriangleSDK {
+  umbrella header "BlueTriangleSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}
