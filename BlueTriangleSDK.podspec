@@ -25,7 +25,7 @@ Pod::Spec.new do |s|
   # s.screenshots     = ''
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Julian Wilkison-Duran' => 'julian.wilkison@bluetriangle.com' }
-  s.source           = { :git => 'git@github.com:blue-triangle-tech/bluetriangle-ios-sdk.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/blue-triangle-tech/bluetriangle-ios-sdk.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/_BlueTriangle'
 
   s.ios.deployment_target = '12.0'

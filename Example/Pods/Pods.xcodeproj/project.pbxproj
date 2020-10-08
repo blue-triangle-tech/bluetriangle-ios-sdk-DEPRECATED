@@ -233,8 +233,13 @@
 		E50931D7252F914A009B5E4D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				E5605DA9252F8B88008DBECE /* Utils */,
-				E5605DA5252F8B87008DBECE /* Resources */,
+				E5605DA6252F8B87008DBECE /* strip-frameworks.sh */,
+				E5605DAA252F8B88008DBECE /* ThreadSafeMutableDictionary.h */,
+				E5605DAB252F8B88008DBECE /* BTUploadOperation.h */,
+				E5605DAC252F8B88008DBECE /* BTUploader.h */,
+				E5605DAD252F8B88008DBECE /* BTUploadOperation.m */,
+				E5605DAE252F8B88008DBECE /* ThreadSafeMutableDictionary.m */,
+				E5605DAF252F8B88008DBECE /* BTUploader.m */,
 				E5605DB1252F8B88008DBECE /* BlueTriangle.h */,
 				E5605DB2252F8B88008DBECE /* BTTimer.h */,
 				E5605DB0252F8B88008DBECE /* BTTimer.m */,
@@ -242,27 +247,6 @@
 				E5605DA8252F8B88008DBECE /* BTTracker.m */,
 			);
 			path = Classes;
-			sourceTree = "<group>";
-		};
-		E5605DA5252F8B87008DBECE /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				E5605DA6252F8B87008DBECE /* strip-frameworks.sh */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		E5605DA9252F8B88008DBECE /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				E5605DAA252F8B88008DBECE /* ThreadSafeMutableDictionary.h */,
-				E5605DAB252F8B88008DBECE /* BTUploadOperation.h */,
-				E5605DAC252F8B88008DBECE /* BTUploader.h */,
-				E5605DAD252F8B88008DBECE /* BTUploadOperation.m */,
-				E5605DAE252F8B88008DBECE /* ThreadSafeMutableDictionary.m */,
-				E5605DAF252F8B88008DBECE /* BTUploader.m */,
-			);
-			path = Utils;
 			sourceTree = "<group>";
 		};
 		E8D827EA7A0AEA16C483DD38454BF497 /* Support Files */ = {
@@ -379,7 +363,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1100;
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1200;
 				TargetAttributes = {
 					087645A547DF91416EB2E09BE57F6741 = {
 						DevelopmentTeam = PS6YPUX6J9;
@@ -490,7 +474,7 @@
 			baseConfigurationReference = 1BFEE303892B849B79EB7081A3DDC4B0 /* Pods-BlueTriangleSDK_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -524,7 +508,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2674D4917139344E8F49A28F1AB943AB /* BlueTriangleSDK.release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -558,7 +542,7 @@
 			baseConfigurationReference = E8AD7DD63D8F3887483CC01923313533 /* Pods-BlueTriangleSDK_Tests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -614,6 +598,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -673,6 +658,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -715,7 +701,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A0B5BBB1DD15DFE56EF283117D291CC9 /* BlueTriangleSDK.debug.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -748,7 +734,7 @@
 			baseConfigurationReference = CFF6E6CA7D52163BCBC171D736D79E45 /* Pods-BlueTriangleSDK_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -782,7 +768,7 @@
 			baseConfigurationReference = F4375D8E661F1DFDB4261833060424C8 /* Pods-BlueTriangleSDK_Tests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
