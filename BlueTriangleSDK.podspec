@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
 
   s.ios.deployment_target = '12.0'
 
-  s.source_files = 'BlueTriangleSDK/Classes/**/*'
+  s.source_files = 'Classes/*.{h,m}'
   
   # s.resource_bundles = {
   #   'BlueTriangleSDK' => ['BlueTriangleSDK/Assets/*.png']
